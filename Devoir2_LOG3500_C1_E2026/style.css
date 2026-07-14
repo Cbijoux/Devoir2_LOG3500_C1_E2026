@@ -1,0 +1,339 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(rgba(8,35,83,.70),
+    rgba(18,62,145,.70)),
+    url("https://images.unsplash.com/photo-1501973801540-537f08ccae7b?auto=format&fit=crop&w=1500&q=80");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    flex-direction:column;
+
+    color:white;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+
+    text-align:center;
+    padding:40px 20px 20px;
+
+}
+
+header h1{
+
+    font-size:2.3rem;
+    margin-bottom:10px;
+    font-weight:700;
+
+}
+
+header p{
+
+    font-size:1rem;
+    opacity:.9;
+
+}
+
+/* ===========================
+   MAIN
+=========================== */
+
+main{
+
+    width:100%;
+    max-width:900px;
+
+    margin:auto;
+
+    padding:20px;
+
+}
+
+/* ===========================
+   FORMULAIRE
+=========================== */
+
+.search-section{
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.30);
+
+}
+
+label{
+
+    display:block;
+
+    margin-bottom:12px;
+
+    font-weight:600;
+
+}
+
+.search-box{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    padding:15px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+}
+
+.search-box input:focus{
+
+    box-shadow:0 0 10px white;
+
+}
+
+.search-box button{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:15px 28px;
+
+    border-radius:10px;
+
+    background:#00b4ff;
+
+    color:white;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.search-box button:hover{
+
+    background:#0092d1;
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================
+   MESSAGE D'ERREUR
+=========================== */
+
+.error-message{
+
+    display:block;
+
+    margin-top:10px;
+
+    color:#ffd6d6;
+
+    font-size:.9rem;
+
+}
+
+/* ===========================
+   LOADING
+=========================== */
+
+.loading{
+
+    text-align:center;
+
+    margin-top:35px;
+
+}
+
+.spinner{
+
+    width:65px;
+
+    height:65px;
+
+    border:6px solid rgba(255,255,255,.30);
+
+    border-top:6px solid white;
+
+    border-radius:50%;
+
+    margin:auto;
+
+    animation:rotation 1s linear infinite;
+
+}
+
+@keyframes rotation{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ===========================
+   CARTE METEO
+=========================== */
+
+.weather-card{
+
+    margin-top:35px;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.30);
+
+}
+
+.weather-card h2{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+    font-size:2rem;
+
+}
+
+.weather-card p{
+
+    margin:18px 0;
+
+    font-size:1.15rem;
+
+}
+
+.weather-card span{
+
+    font-weight:600;
+
+}
+
+/* ===========================
+   MESSAGE API
+=========================== */
+
+.api-error{
+
+    margin-top:25px;
+
+    background:#b91c1c;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    text-align:center;
+
+    padding:30px;
+
+    font-size:.9rem;
+
+    opacity:.85;
+
+}
+
+/* ===========================
+   CLASSE CACHEE
+=========================== */
+
+.hidden{
+
+    display:none;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .search-box{
+
+        flex-direction:column;
+
+    }
+
+    .search-box button{
+
+        width:100%;
+
+    }
+
+    header h1{
+
+        font-size:1.8rem;
+
+    }
+
+    .weather-card{
+
+        padding:25px;
+
+    }
+
+}

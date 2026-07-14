@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tableau de Bord Météo</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1>🌤 Tableau de Bord Météo</h1>
+        <p>Consultez les conditions météorologiques actuelles d'une ville.</p>
+    </header>
+
+    <main>
+
+        <section class="search-section">
+
+            <form id="weatherForm" novalidate>
+
+                <label for="city">Nom de la ville</label>
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        id="city"
+                        name="city"
+                        placeholder="Ex : Les Cayes"
+                        aria-describedby="errorMessage">
+
+                    <button type="submit">
+                        Rechercher
+                    </button>
+
+                </div>
+
+                <small
+                    id="errorMessage"
+                    class="error-message">
+                </small>
+
+            </form>
+
+        </section>
+
+
+        <section id="loading" class="loading hidden">
+
+            <div class="spinner"></div>
+
+            <p>Chargement...</p>
+
+        </section>
+
+
+        <section
+            id="weatherCard"
+            class="weather-card hidden">
+
+            <h2 id="cityName"></h2>
+
+            <p>
+                <strong>Pays :</strong>
+                <span id="country"></span>
+            </p>
+
+            <p>
+                <strong>🌡 Température :</strong>
+                <span id="temperature"></span>
+            </p>
+
+            <p>
+                <strong>💨 Vent :</strong>
+                <span id="wind"></span>
+            </p>
+
+            <p>
+                <strong>☁ Conditions :</strong>
+                <span id="weatherStatus"></span>
+            </p>
+
+        </section>
+
+
+        <section
+            id="apiError"
+            class="api-error hidden">
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            LOG3500 - Applications Web Asynchrones |
+            Open-Meteo API
+        </p>
+
+    </footer>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
